@@ -85,7 +85,7 @@ m.predict_f_compiled = tf.function(
 
 
 @tf.function(input_signature=[tf.TensorSpec(shape=None, dtype=tf.float64)])
-def test(x):
+def geolocate(x):
     
     # err, val = m.predict_f_compiled( (x-xx[0])/xx[1] )
     # 
@@ -97,7 +97,7 @@ def test(x):
     # 
     return m.predict_f_compiled( (x-xx[0])/xx[1] ), scales, x, (x-xx[0])/xx[1]
 
-m.test=test
+m.geolocate=geolocate
 
 # m.add_to_collection('CONSTANTS', tf.constant(value=66, name=test))
 
