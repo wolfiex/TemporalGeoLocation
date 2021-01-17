@@ -38,7 +38,7 @@ import tensorflow as tf
 from gpflow.utilities import print_summary
 from gpflow.ci_utils import ci_niter
 # 
-plt.rcParams["figure.figsize"] = (12, 3)
+# plt.rcParams["figure.figsize"] = (12, 3)
 
 
 X = coords[:, -2].reshape(-1, 1)
