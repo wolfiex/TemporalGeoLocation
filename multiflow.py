@@ -200,7 +200,7 @@ def geolocate(x):
     # err *= scales 
     # err += means
     # 
-    return m.predict_f_compiled( (x-xx[0])/xx[1] ), scales, x, (x-xx[0])/xx[1]
+    return [m.predict_f_compiled( (x-xx[0])/xx[1] ), scales, x, (x-xx[0])/xx[1]]
 
 m.geolocate=geolocate
 
