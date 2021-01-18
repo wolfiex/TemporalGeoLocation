@@ -206,17 +206,18 @@ m.geolocate=geolocate
 
 # m.add_to_collection('CONSTANTS', tf.constant(value=66, name=test))
 
-
+print ('')
 save_dir = './gpe_locations'
 tf.saved_model.save(m, save_dir)
+print('')
+print('saved')
 
 
-
-
+save_dir = './gpe_locations'
 l = tf.saved_model.load(save_dir)
-l.predict_f_compiled(np.array([[0.2]]))
+lr = l.predict_f_compiled(np.array([[0.2]]))
 
-
+print(lr)
 
 
 
